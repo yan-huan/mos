@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/myb-accounts/myb-accounts.iml" filepath="$PROJECT_DIR$/myb-accounts/myb-accounts.iml" />
+      <module fileurl="file://$PROJECT_DIR$/myb-build/myb-build.iml" filepath="$PROJECT_DIR$/myb-build/myb-build.iml" />
+      <module fileurl="file://$PROJECT_DIR$/myb-clerk/myb-clerk.iml" filepath="$PROJECT_DIR$/myb-clerk/myb-clerk.iml" />
+      <module fileurl="file://$PROJECT_DIR$/myb-common/myb-common.iml" filepath="$PROJECT_DIR$/myb-common/myb-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/myb-entity/myb-entity.iml" filepath="$PROJECT_DIR$/myb-entity/myb-entity.iml" />
+      <module fileurl="file://$PROJECT_DIR$/myb-feedback/myb-feedback.iml" filepath="$PROJECT_DIR$/myb-feedback/myb-feedback.iml" />
+      <module fileurl="file://$PROJECT_DIR$/myb-framework/myb-framework.iml" filepath="$PROJECT_DIR$/myb-framework/myb-framework.iml" />
+      <module fileurl="file://$PROJECT_DIR$/myb-inventory/myb-inventory.iml" filepath="$PROJECT_DIR$/myb-inventory/myb-inventory.iml" />
+      <module fileurl="file://$PROJECT_DIR$/myb-mos/myb-mos.iml" filepath="$PROJECT_DIR$/myb-mos/myb-mos.iml" />
+      <module fileurl="file://$PROJECT_DIR$/myb-mos-api/myb-mos-api.iml" filepath="$PROJECT_DIR$/myb-mos-api/myb-mos-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/myb-mos-service/myb-mos-service.iml" filepath="$PROJECT_DIR$/myb-mos-service/myb-mos-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/myb-web/myb-web.iml" filepath="$PROJECT_DIR$/myb-web/myb-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/myb-wos/myb-wos.iml" filepath="$PROJECT_DIR$/myb-wos/myb-wos.iml" />
+    </modules>
+  </component>
+</project>

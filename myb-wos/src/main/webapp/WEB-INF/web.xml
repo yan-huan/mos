@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.0"
+         xmlns="http://java.sun.com/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+	http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+    <display-name></display-name>
+
+	<welcome-file-list>
+		<welcome-file>loginUI</welcome-file>
+	</welcome-file-list>
+
+    <!-- spring配置开始 -->
+    <context-param>
+        <param-name>contextConfigLocation</param-name>
+        <param-value>
+            classpath:config/sp/application_context.xml
+        </param-value>
+    </context-param>
+    <listener>
+        <listener-class>
+            org.springframework.web.context.ContextLoaderListener
+        </listener-class>
+    </listener>
+    <!-- spring配置结束  -->
+
+
+    <filter>
+        <filter-name>characterEncodingFilter</filter-name>
+        <filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
+        <init-param>
+            <param-name>encoding</param-name>
+            <param-value>UTF-8</param-value>
+        </init-param>
+        <init-param>
+            <param-name>forceEncoding</param-name>
+            <param-value>true</param-value>
+        </init-param>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>characterEncodingFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+    
+    
+	<servlet>
+		<servlet-name>CheckCodeServlet</servlet-name>
+		<servlet-class>com.myb.feedback.servlet.CheckCodeServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>CheckCodeServlet</servlet-name>
+		<url-pattern>/servlet/CheckCodeServlet</url-pattern>
+	</servlet-mapping>
+
+	<filter>
+		<filter-name>LoginCheckFilter</filter-name>
+		<filter-class>com.myb.feedback.filter.LoginCheckFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>LoginCheckFilter</filter-name>
+		<url-pattern>/manage/control/*</url-pattern>
+	</filter-mapping>
+	
+	<filter>
+		<filter-name>FrontLoginCheckFilter</filter-name>
+		<filter-class>com.myb.feedback.filter.FrontLoginCheckFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>FrontLoginCheckFilter</filter-name>
+		<url-pattern>/wos/*</url-pattern>
+	</filter-mapping>
+
+    <!-- spring mvc配置开始 -->
+    <servlet>
+        <servlet-name>spring_mvc</servlet-name>
+        <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+        <init-param>
+            <param-name>contextConfigLocation</param-name>
+            <param-value>classpath:config/sp/spring_mvc.xml</param-value>
+        </init-param>
+        <init-param>
+            <param-name>encoding</param-name>
+            <param-value>UTF-8</param-value>
+        </init-param>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>spring_mvc</servlet-name>
+        <url-pattern>/loginUI</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>spring_mvc</servlet-name>
+        <url-pattern>*.jhtml</url-pattern>
+    </servlet-mapping>
+    <!-- spring mvc配置结束 -->
+
+    <!-- session超时定义,单位为分钟 -->
+    <session-config>
+        <session-timeout>1440</session-timeout>
+    </session-config>
+
+
+</web-app>

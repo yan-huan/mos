@@ -1,0 +1,43 @@
+<decorators defaultdir="/decorators">
+	<!--不包含的访问路径  -->
+	<excludes>
+	<pattern>/login/*.jhtml</pattern>
+	<pattern>/utils/register.jhtml</pattern>
+	<pattern>/Account/testMethod.jhtml</pattern>
+	<pattern>/utils/modifyPwd.jhtml</pattern>
+	<pattern>/contract/test.jhtml</pattern>
+	</excludes>
+		
+	<!--包含的路径  -->
+		<decorator name="default" page="default.jsp">
+			<pattern>/utils/register.jhtml</pattern>
+			<pattern>/contract/*.*</pattern>
+			<pattern>/Account/*.jhtml</pattern>
+			<pattern>/role/*.jhtml</pattern>
+			<pattern>/Shop/*.jhtml</pattern>
+			<pattern>/contract/index.jhtml</pattern>
+			<pattern>/utils/contractSave.jhtml</pattern>
+			<pattern>/utils/OpenAccount.jhtml</pattern>
+			<pattern>/utils/BeautifulYardSearch.jhtml</pattern>
+			<pattern>/utils/AddChannelInfo.jhtml</pattern>
+			<pattern>/Account/index.jhtml**</pattern>
+			<pattern>/upBoss/upbosslogsSearch.jhtml**</pattern>
+			<pattern>/channelInfo/*.jhtml</pattern>
+			<pattern>/utils/CloseAccountList*</pattern>
+			<pattern>/excel/*.jhtml</pattern>
+			<pattern>/ExceptionShop/*.jhtml</pattern>
+			<pattern>/crm/*.jhtml</pattern>
+			<pattern>/utils/crm_user_infos.jhtml</pattern>
+			<pattern>/redis/redisPage.jhtml</pattern>
+			<pattern>/utils/channelAccountToChannel.jhtml</pattern>
+			<pattern>/ExceptionCompany/*.jhtml</pattern>
+			<pattern>/utils/searchAccount.jhtml</pattern>
+			<pattern>/free/showFreeListOpenAccount.jhtml</pattern>
+			<pattern>/free/showFreeListOpenAccount.jhtml</pattern>
+			
+		</decorator>
+		
+		<decorator name="index" page="index.jsp">
+			<pattern>/project/index.jhtml</pattern>
+		</decorator>
+</decorators>

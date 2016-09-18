@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="myb-mos:war">
+    <output-path>$PROJECT_DIR$/myb-mos/target</output-path>
+    <root id="archive" name="myb-web.war">
+      <element id="artifact" artifact-name="myb-mos:war exploded" />
+    </root>
+  </artifact>
+</component>

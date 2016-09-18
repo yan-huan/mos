@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RSConfig>
+	<RSFiles>
+		<js name="jquery" path="/js/jquery.min.js" version="20140102"
+			pathType="LOCAL" />
+		<js name="easyui" path="/js/jquery.easyui.min.js" version="20140101"
+			pathType="LOCAL" />
+		<js name="easyui-cn" path="/js/easyui-lang-zh_CN.js" version="20140101"
+			pathType="LOCAL" />
+
+		
+		<css name="easyui" path="/css/easyui.css" version="20140102"
+			pathType="LOCAL" />
+		<css name="easyui-icon" path="/css/icon.css" version="20140101"
+			pathType="LOCAL" />
+
+	</RSFiles>
+	<Common>
+		<js>jquery</js>
+		<js>easyui</js>
+		<js>easyui-cn</js>
+
+		<css>easyui</css>
+		<css>easyui-icon</css>
+	</Common>
+	<pages>
+		<page path="home.jhtml">
+		
+		</page>
+	</pages>
+</RSConfig>

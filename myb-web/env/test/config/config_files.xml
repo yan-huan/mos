@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ConfigFiles>
+  <ConfigFile name="appConfig" path="/config/app/app_config.xml"/>
+  <ConfigFile name="resourceConfig" path="/config/app/resource_config.xml"/>
+    <ConfigFile name="parameterConfig" path="/config/app/parameter_config.xml"/>
+</ConfigFiles>

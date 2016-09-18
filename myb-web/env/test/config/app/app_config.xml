@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AppConfig>
+  <SiteId>myb-web</SiteId>
+  <SiteName>myb-web</SiteName>
+  <Resource>
+    <Css address="http://test-css.my.com/" merge="false"/>
+    <Img address="http://img.my.com/" merge="false"/>
+    <Js address="http://js.my.com/" merge="false"/>
+  </Resource>
+</AppConfig>
