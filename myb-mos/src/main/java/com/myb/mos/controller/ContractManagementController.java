@@ -173,7 +173,7 @@ public class ContractManagementController {
     		mav.addObject("contract", contracts.get(0));
     		mav.addObject("employee", employee);
     	} else {
-    		
+
     	}
     	
     	String finance = request.getParameter("finance");

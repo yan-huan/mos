@@ -426,12 +426,14 @@ public class OpenAccountController {
 		if (StringUtils.isNotBlank(accountName )&&StringUtils.isBlank(dh)&&StringUtils.isBlank(mobile)) {
 			queryParameterByContract.eq("payAccountName", accountName);
 			List<Contract> contractsList = contractService.searchList(queryParameterByContract);
+			// TODO: 2016/9/19   未查到数据时此处会报错
 			Contract contract = contractsList.get(contractsList.size()-1);
 			queryParameter.eq("openNumber", contract.getOpenNumber());
 		}
 		if (StringUtils.isBlank(accountName )&&StringUtils.isNotBlank(dh )&&StringUtils.isBlank(mobile )) {
 			queryParameterByContract.eq("payNumber", dh);
 			List<Contract> contractsList = contractService.searchList(queryParameterByContract);
+			// TODO: 2016/9/19   未查到数据时此处会报错
 			Contract contract = contractsList.get(contractsList.size()-1);
 			queryParameter.eq("openNumber", contract.getOpenNumber());
 		}
@@ -446,7 +448,7 @@ public class OpenAccountController {
 		List<OpenAccountVO> openAccountVOsList = new ArrayList<OpenAccountVO>();
 		OpenAccount openAccount = null; 
 		if (openAccountsList != null && openAccountsList.size() > 0) {
-			for (int i = 0; i < openAccountsList.size(); i++) {
+				for (int i = 0; i < openAccountsList.size(); i++) {
 				OpenAccountVO openAccountVO = new OpenAccountVO();
 				BeanUtils.copyProperties(openAccountsList.get(i), openAccountVO);
 				if (openAccountsList.get(i).getPayDate() != null) {
