@@ -5,6 +5,7 @@
   </component>
   <component name="FrameworkDetectionExcludesConfiguration">
     <file type="web" url="file://$PROJECT_DIR$/myb-mos" />
+    <file type="web" url="file://$PROJECT_DIR$/myb-mos-api" />
   </component>
   <component name="MavenProjectsManager">
     <option name="originalFiles">
@@ -13,6 +14,7 @@
         <option value="$PROJECT_DIR$/myb-framework/pom.xml" />
         <option value="$PROJECT_DIR$/myb-entity/pom.xml" />
         <option value="$PROJECT_DIR$/myb-mos-service/pom.xml" />
+        <option value="$PROJECT_DIR$/myb-mos-api/pom.xml" />
       </list>
     </option>
   </component>

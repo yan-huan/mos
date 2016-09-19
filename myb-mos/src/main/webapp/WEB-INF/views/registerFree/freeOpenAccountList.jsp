@@ -124,7 +124,7 @@
 								<tbody id="allData">
 									<c:forEach items="${openAccountPageList.content}" var="openAccountPageList">
 											<tr>
-												<td>${openAccountPageList.beautifulyard}</td>
+												<td>${openAccountPageList.beautifulyard}${openAccountPageList.approvalStatus}</td>
 												<td>${openAccountPageList.provinceName}</td>
 												<td>${openAccountPageList.cityName}</td>
 												<td>${openAccountPageList.openNumber}</td>

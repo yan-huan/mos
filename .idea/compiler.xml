@@ -25,6 +25,7 @@
         <module name="myb-entity" />
         <module name="myb-framework" />
         <module name="myb-mos" />
+        <module name="myb-mos-api" />
         <module name="myb-mos-service" />
       </profile>
     </annotationProcessing>
@@ -32,6 +33,7 @@
       <module name="myb-entity" target="1.8" />
       <module name="myb-framework" target="1.8" />
       <module name="myb-mos" target="1.8" />
+      <module name="myb-mos-api" target="1.8" />
       <module name="myb-mos-service" target="1.8" />
     </bytecodeTargetLevel>
   </component>

@@ -10,7 +10,7 @@
 	</parent>
 	<artifactId>myb-mos-api</artifactId>
 	<packaging>war</packaging>
-	<name>myb-web Maven Webapp</name>
+	<name>myb-api-web Maven Webapp</name>
 	<url>http://maven.apache.org</url>
 
 
