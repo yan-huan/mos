@@ -1045,6 +1045,7 @@ public class OpenAccountController {
 					if (openAccount.getApprovalStatus() == 4 && openAccount.getIsOpenStatus() != 0) {
 						openAccount.setApprovalStatus(2);
 						if (openAccount.getIsOpenStatus() == 1) {
+							openAccount.setFinanceSuccessDate(new Date());
 							int updateStatus = openAccountService.update(openAccount);
 							if (updateStatus == 1) {
 								return "tg";

@@ -29,5 +29,5 @@ public class OpenAccountMapping {
     public final static String OperationReason = "operationReason";
     public final static String FilePath = "filePath";
     public final static String TouchMobile = "touchMobile";
-
+    public final static String FinanceSuccessDate = "financeSuccessDate";
 }

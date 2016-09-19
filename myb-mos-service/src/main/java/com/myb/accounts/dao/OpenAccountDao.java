@@ -88,7 +88,8 @@ public class OpenAccountDao extends MySqlCommandBase
         		+ "province=@{province},city=@{city},companyCode=@{companyCode},approvalStatus=@{approvalStatus},"
         		+ "isAddAccount=@{isAddAccount},updateDate=@{updateDate},refuseInfo=@{refuseInfo},empId=@{empId},"
         		+ "isOpenStatus=@{isOpenStatus},isChannel=@{isChannel},isShowQudaoList=@{isShowQudaoList},"
-        		+ "consumerId=@{consumerId},isOperationException=@{isOperationException},operationReason=@{operationReason},filePath=@{filePath},touchMobile=@{touchMobile} WHERE accountId=@{accountId}";
+        		+ "consumerId=@{consumerId},isOperationException=@{isOperationException},operationReason=@{operationReason},filePath=@{filePath}," +
+                "touchMobile=@{touchMobile},financeSuccessDate=@{financeSuccessDate} WHERE accountId=@{accountId}";
         SqlParameter sqlParameter=new SqlParameter();
         sqlParameter.add(OpenAccountMapping.AccountId, openAccount.getAccountId());
         sqlParameter.add(OpenAccountMapping.Beautifulyard, openAccount.getBeautifulyard());
@@ -117,6 +118,7 @@ public class OpenAccountDao extends MySqlCommandBase
         sqlParameter.add(OpenAccountMapping.OperationReason, openAccount.getOperationReason());
         sqlParameter.add(OpenAccountMapping.FilePath, openAccount.getFilePath());
         sqlParameter.add(OpenAccountMapping.TouchMobile, openAccount.getTouchMobile());
+        sqlParameter.add(OpenAccountMapping.FinanceSuccessDate, openAccount.getFinanceSuccessDate());
         return this.getDataCommand().executeNonQuery(sql, sqlParameter);
     }
 

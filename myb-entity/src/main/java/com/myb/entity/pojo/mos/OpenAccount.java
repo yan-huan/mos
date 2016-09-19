@@ -5,6 +5,8 @@ import com.myb.framework.data.EntityBase;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.myb.framework.serialization.JsonLongDateFormatSerializer;
 
+import java.util.Date;
+
 public class OpenAccount extends EntityBase{
 
     @DataMapping(OpenAccountMapping.AccountId)
@@ -65,6 +67,12 @@ public class OpenAccount extends EntityBase{
     public String filePath;//上传免费版的门店照片
     @DataMapping(OpenAccountMapping.TouchMobile)
     public String touchMobile;//关联免费版的手机号
+
+
+
+    @DataMapping(OpenAccountMapping.FinanceSuccessDate)
+    private java.util.Date financeSuccessDate;//财务通过时间
+
 
     public OpenAccount() { }
 
@@ -334,7 +342,13 @@ public class OpenAccount extends EntityBase{
 		this.touchMobile = touchMobile;
 	}
 
+    public Date getFinanceSuccessDate() {
+        return financeSuccessDate;
+    }
 
-	
+    public void setFinanceSuccessDate(Date financeSuccessDate) {
+        this.financeSuccessDate = financeSuccessDate;
+    }
+
 
 }
