@@ -1,6 +1,4 @@
-/**
- * Created by ZhangLun on 2016/9/19.
- */
+
 import com.myb.accounts.service.OpenAccountService;
 import com.myb.entity.pojo.mos.OpenAccount;
 import org.junit.Test;
@@ -14,8 +12,7 @@ import java.util.Date;
 
 
 /**
- * @author Rainisic
- *
+ * Created by ZhangLun on 2016/9/19.
  */
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations = "classpath:application_context.xml")
