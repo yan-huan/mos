@@ -142,7 +142,7 @@
 				<div class="row">
 					<jsp:include page="../menu/headerNext.jsp"></jsp:include>
 					<div class="col-lg-offset-2 main">
-					<h3 class="page-header">客户管理列表</h3>
+					<h3 class="page-header">拜访管理列表</h3>
 						<div class="row head">
 							<div class="col-md-8">
 							<form id="yanzheng">
@@ -156,14 +156,14 @@
 										</td>
 										<td>
 										<select id="xz" class=" form-control" name="xiaozu">
-											<option>请选择小组</option>
+											<option value="all">全部</option>
 										</select>
 										</td>
 										
 										<td><a href="javascript:void(0)"  class="btn btn-info btn-sm search">查询</a></td>
-										<c:if test="${employee.userName eq 'admin' }">
+										<%--<c:if test="${employee.userName eq 'admin' }">
 											<td><a href="http://101.201.42.115:8989/myb-mos-api/file/customerExcel?area=1"   class="btn btn-info btn-sm">下载excel</a></td>
-										</c:if>
+										</c:if>--%>
 									</tr>
 								</tbody>
 								</table>
@@ -199,6 +199,19 @@
 												<td>${visitrecords.shopValideCount}</td>
 											</tr>
 									</c:forEach>
+										<tr>
+											<td>
+												合计
+											</td>
+											<td>
+
+											</td>
+											<td></td>
+											<td>${visitTotal}</td>
+											<td>${visitValidTotal}</td>
+											<td>${shopTotal}</td>
+											<td>${shopValidTotal}</td>
+										</tr>
 						</tbody>
 					<tbody id="searchContent">
 						

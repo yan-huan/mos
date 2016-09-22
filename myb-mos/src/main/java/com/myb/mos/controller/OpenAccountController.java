@@ -1,64 +1,25 @@
 package com.myb.mos.controller;
 
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.stream.Collectors;
-
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-
+import com.alibaba.fastjson.JSONObject;
+import com.myb.accounts.service.*;
+import com.myb.entity.pojo.mos.*;
+import com.myb.framework.data.*;
+import com.myb.mos.VO.OpenAccountVO;
+import com.myb.mos.VO.ShopVO;
+import com.myb.mos.utils.*;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.alibaba.fastjson.JSONArray;
-import com.alibaba.fastjson.JSONObject;
-import com.myb.accounts.service.ArgsService;
-import com.myb.accounts.service.ChannelInfoService;
-import com.myb.accounts.service.ContractService;
-import com.myb.accounts.service.EmployeeService;
-import com.myb.accounts.service.OpenAccountService;
-import com.myb.accounts.service.OpenaccountChannelService;
-import com.myb.accounts.service.RecordlogsService;
-import com.myb.accounts.service.ShopService;
-import com.myb.accounts.service.UpbosslogsService;
-import com.myb.entity.pojo.mos.AddressAreaDef;
-import com.myb.entity.pojo.mos.ChannelInfo;
-import com.myb.entity.pojo.mos.Contract;
-import com.myb.entity.pojo.mos.Employee;
-import com.myb.entity.pojo.mos.OpenAccount;
-import com.myb.entity.pojo.mos.OpenaccountChannel;
-import com.myb.entity.pojo.mos.Recordlogs;
-import com.myb.entity.pojo.mos.Shop;
-import com.myb.entity.pojo.mos.ShopMapping;
-import com.myb.entity.pojo.mos.Upbosslogs;
-import com.myb.framework.data.PagedList;
-import com.myb.framework.data.QueryCondition;
-import com.myb.framework.data.QueryParameter;
-import com.myb.framework.data.SortParameter;
-import com.myb.framework.data.SqlOrder;
-import com.myb.framework.data.SqlSort;
-import com.myb.mos.VO.OpenAccountVO;
-import com.myb.mos.VO.ShopVO;
-import com.myb.mos.utils.BaseProUtill;
-import com.myb.mos.utils.DesUtill;
-import com.myb.mos.utils.HttpClientUtil;
-import com.myb.mos.utils.RedisUtil;
-import com.myb.mos.utils.RegexUtils;
-import com.myb.mos.utils.SortClassUtils;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.*;
+import java.util.stream.Collectors;
 
 /**
  * 开通账号
@@ -99,7 +60,7 @@ public class OpenAccountController {
 	
 	/**
 	 * 保存之后跳转页面
-	 * @param request
+	 * @param paramrequest
 	 * @param response
 	 * @param openAccount
 	 * @return
