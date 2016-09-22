@@ -122,6 +122,9 @@ public class CrmController {
 	public ModelAndView showListCustomer(HttpServletRequest request, HttpServletResponse response,@RequestParam(value="pageIndex",defaultValue="1") int pageIndex){
 		ModelAndView mav = new ModelAndView("/customerVisit/CustomerVisitList");
 
+
+
+		
 		Map<String, String> map = new HashMap<String, String>();
 		String area = "1";
 		if (pageIndex <= 0) {
